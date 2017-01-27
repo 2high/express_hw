@@ -6,6 +6,18 @@
   </head>
   <body>
     <h1>Welcome to fazbook</h1>
+    <% users.forEach((user) => { %>
+				<ul>
+					<li><%= user.email %></li>
+					<li><%= user.firstName %></li>
+					<li><%= user.lastName %></li>
+					<li><%= user.dob %></li>
+          <form action="<%= '/users/' + user.id + '?_method=DELETE' %>" method="POST">
+            <input type="submit" value='Delete' />
+          </form>
+				</ul>
+			<% }) %>
     <a href="/users/new">Create New User</a>
+
   </body>
 </html>

@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title><%= title %></title>
-   <link rel='stylesheet' href='/stylesheets/style.css' />
- </head>
- <body>
-   <h1>Welcome to fazbook</h1>
-   <a href='/users/new'>Create a new fazbook</a>
-   <% users.forEach(function(user) { %>
-     <div>
-     <a href="<%= '/users/' + user.id%>"><%= user.firstName %></a>
-     <form action="<%= '/users/' + user.id + '?_method=DELETE' %>" method="POST">
-     <input type="submit" value="x">
-     </form>
-     </div>
-  <% }) %>
- </body>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body class="bg">
+    <header>
+     <nav class="navbar navbar-inverse">
+       <div class="container">
+         <div class="navbar-header">
+
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+
+           <a href="/" class="navbar-brand">Express HW</a>
+         </div>
+         <div class="collapse navbar-collapse" id="navbar-collapse">
+           <ul class="nav navbar-nav navbar-right">
+             <li><a href="/">Home</a></li>
+             <li ><a class="blu" href='/users/new'>Create new user</a></li>
+           </ul><!-- nav -->
+         </div><!-- navbar-collapse -->
+       </div><!-- container -->
+     </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center bla">Welcome to fazbook</h1>
+        </div>
+        <div class="col-md-12" style="margin-top:30px;">
+          <a class="uzz" href='/users/new'>Create a new fazbook</a>
+          <div class="uss"></div>
+        </div>
+
+          <div class="col-md-4">
+            <% users.forEach(function(user) { %>
+            <a  class="blz" href="<%= '/users/' + user.id%>"><%= user.firstName %></a>
+            <form action="<%= '/users/' + user.id + '?_method=DELETE' %>" method="POST">
+              <input type="submit" value="x">
+            </form>
+
+
+          </div>
+          <% }) %>
+      </div>
+    </div> <!-- END CONTAINER -->
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
 </html>

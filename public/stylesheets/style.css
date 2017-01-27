@@ -1,8 +1,71 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+/*Background index*/
+.bg{
+  background-image: url(/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*NAVBAR*/
+.navbar-inverse {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.navbar-inverse .navbar-brand{
+  color: #1e1e1e!important;
+  font-size: 3em;
+  padding-top:30px;
+}
+.navbar-inverse .navbar-nav>li>a{
+  font-size: 1.4em !important;
+  margin-top:15px;
+  color: #1e1e1e !important;
+  margin-left: 30px;
+  transition: border-bottom 1s ease;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+  border-bottom: solid 1px #fff;
+}
+.blu{
+  border: solid 1px #1e1e1e;
+
+}
+
+/*index*/
+
+.bla{
+  margin-top: 2%;
+  padding: 20px;
+  color: #b5b5b5;
+  font-size: 4em;
+}
+.uzz{
+  background-color: #2d3661;
+  padding: 15px;
+  color: #fff;
+  top: 20px;
+}
+.uss{
+  margin-top:80px;
+}
+.blz{
+  border: solid 1px #fff;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 20px;
+  background-color: #1e1e1e;
+  margin-bottom: 20px;
+}
+.blz:hover{
+  color:#1e1e1e;
+  background-color: #E9E8E5;
+  text-decoration: none;
+  border: solid 1px #1e1e1e;
 }
